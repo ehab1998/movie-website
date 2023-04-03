@@ -1,13 +1,347 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap');
+body
+{
+  /* font-family: 'Montserrat Alternates', sans-serif; */
+  background-color: #131722 !important;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+h3 {
+  height: 50px;
+  font-size: 1rem;
+}
+.bg-lights
+{
+  background-color: #024158 !important;
+}
+.brdr
+{
+  background-color: rgba(128, 128, 128, 0.333) !important;
+  height: 3px;
+}
+.h3 {
+  line-height: 1.4;
+}
+a 
+{
+  color: #fff !important;
+  text-decoration: none;
+}
+a:hover{
+  color: #024158 !important;
+  text-decoration: none;
+}
+/* start navbar */
+.navbar {
+  background-color: #131722;
+  font-size: 1.1rem;
+}
+.navbar-brand {
+  letter-spacing: 2px;
+}
+.navbar i:hover {
+  color: #024158;
+  cursor: pointer;
+}
+.navbar-brand span{
+  color: #046588;
+  font-weight: bolder;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke: #024158;
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+.nav-link {
+  cursor: pointer;
+}
+/* start home component */
+.tranding-text {
+  padding: 10px 0;
+}
+.tranding-text p {
+  color: rgba(155, 153, 153, 0.7);
+}
+.media-parent {
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 250px;
+  height: 450px;
+}
+.media{
+  transition: .3s ease;
+  border-radius: 20px;
+  background-color: #131722;
+}
+.media:hover {
+  transform: translateY(-5px);
+  box-shadow: 7px 7px 7px rgba(91, 90, 90, 0.271),-7px -7px 7px rgba(91, 90, 90, 0.271);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.media .poster {
+  border: 1px solid #131722;
+  overflow: hidden;
+  border-radius: 10px;
+  font-size: .7rem;
+  transition: .5s;
+  width: 100%;
+  height: 340px;
+}
+.poster img {
+  height: 100%;
+}
+
+.media h3,.media:hover h3{
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+@media (max-width:576px) {
+
+  .brdr {
+    display: none;
+  }
+  .tranding-text {
+    text-align: center;
+  }
+}
+@media (min-width:576px){
+
+  .brdr {
+    display: none;
+  }
+  .tranding-text {
+    text-align: center;
+  }
+}
+@media (min-width:768px){
+
+  .brdr {
+    display: block;
+  }
+  .tranding-text {
+    text-align: left;
+  }
+}
+/* End home component */
+/* start Media Details component */
+.media-details{
+  background-color: rgba(18, 18, 18, 0.862);
+}
+.image-detail {
+  margin: 15px 20px;
+  width: 30%;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid white;
+}
+.image-detail img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width:756px) {
+  .image-detail {
+    width: 70%;
+    margin: 10px auto;
+  }
+  .image-detail img {
+    width: 100%;
+  }
+}
+.image-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+/* End  Media Details component */
+section.new_index {
+  height: 370px;
+  z-index: -1;
+  position: relative;
+}
+.carousel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -20;
+}
+.carousel-inner,.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+}
+section.new_index::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* background-color: rgba( 3,37,65,.8); */
+  background-image:  linear-gradient(to right, rgba(3,37,65, 0.8) 0%, rgba(3,37,65, 0.8) 100%);
+}
+
+section.inner_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+div.column_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 30px 40px;
+}
+div.column_wrapper .title {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.column_wrapper .title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.column_wrapper .title h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+@media (max-width:616px){
+  .column_wrapper {
+    height: auto;
+  }
+  .column_wrapper .title h3 {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+}
+.inner_content .search {
+  width: 100%;
+}
+.inner_search_form{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+
+section.new_index form input[type=text] {
+  width: 100%;
+  height: 46px;
+  /* line-height: 46px; */
+  font-size: 1.1em;
+  color: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  z-index: 1;
+}
+section.new_index form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 30px;
+  background-image: linear-gradient(to right,rgba(110, 255, 110, 0.8),#046588);
+  color: white;
+  border: none;
+  outline: none;
+  width: 12%;
+  padding: 5px;
+  height: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 111;
+}
+section form button:hover {
+  color: black;
+  cursor: pointer;
+}
+
+section.new_index form input[type=text]:focus {
+  border: none;
+  outline: none;
+}
+@media (max-width:616px){
+  
+  section.new_index form button {
+    width: 90px;
+    padding: 5px;
+    height: 100%;
+    font-size: 1rem;
+  }
+}
+/* End landing */
+footer {
+  color: #fff;
+  position: relative;
+  z-index: -1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../public/images/background\ image\ for\ landing\ 7.jpg');
+}
+footer::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #02415860;
+}
+footer h3 {
+  font-weight: bold;
+  color: white;
+  height: auto;
+  font-size: 1.5rem;
+}
+@media (max-width:650px){  
+  footer .join {
+    text-align: center;
+  }
+}
+/* movie details */
+.overview .movie-title,.overview .tv-title,.overview .person-title {
+  height: auto;
+  font-size: 1.2rem;
+}
+.moreMedia{
+  width: 200px;
+  border-radius: 50px;
+  padding: 10px 30px;
+  background-image: linear-gradient(to right,rgba(110, 255, 110, 0.8),#046588);
 }
